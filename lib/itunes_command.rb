@@ -63,7 +63,7 @@ module Strongspace::Command
 
           if not (create_pid_file("#{command_name}.rsync", pid))
             display "Couldn't start itunes backup sync, already running?"
-            eixt(1)
+            exit(1)
           end
 
           sleep(5)
